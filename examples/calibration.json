@@ -1,0 +1,5 @@
+[
+  { "id": "clear-positive", "expected": "yes", "probabilities": { "yes": 0.94, "no": 0.06 } },
+  { "id": "clear-negative", "expected": "no", "probabilities": { "yes": 0.12, "no": 0.88 } },
+  { "id": "answer-missing", "expected": null, "probabilities": { "yes": 0.54, "no": 0.46 } }
+]

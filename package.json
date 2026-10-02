@@ -1,0 +1,26 @@
+{
+  "name": "@gbesse/decision-abstain",
+  "version": "0.1.0",
+  "description": "Calibrate, test and enforce abstention for finite AI decisions.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "bin": { "decision-abstain": "./dist/cli.js" },
+  "files": ["dist", "examples", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "release:check": "npm run check && npm test && npm run build && npm pack --dry-run",
+    "prepack": "npm run build"
+  },
+  "devDependencies": { "@types/node": "^24.5.2", "tsx": "^4.20.5", "typescript": "^5.9.2" },
+  "repository": { "type": "git", "url": "git+https://github.com/gbesse/decision-abstain.git" },
+  "homepage": "https://github.com/gbesse/decision-abstain#readme",
+  "bugs": { "url": "https://github.com/gbesse/decision-abstain/issues" },
+  "publishConfig": { "access": "public" },
+  "keywords": ["abstention", "calibration", "selective-classification", "jev", "evaluation"]
+}
